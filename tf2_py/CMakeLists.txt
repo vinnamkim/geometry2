@@ -17,7 +17,6 @@ find_package(PythonLibs 3 REQUIRED)
 find_package(rclpy REQUIRED)
 find_package(tf2 REQUIRED)
 find_package(tf2_msgs REQUIRED)
-find_package(tf2_ros REQUIRED)
 
 include_directories(${PYTHON_INCLUDE_PATH})
 
@@ -41,7 +40,7 @@ ament_python_install_package(${PROJECT_NAME})
 
 install(TARGETS
   ${PROJECT_NAME}
-  DESTINATION lib
+  DESTINATION ${PYTHON_INSTALL_DIR}
 )
 
 if(BUILD_TESTING)
