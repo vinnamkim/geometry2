@@ -20,6 +20,8 @@ find_package(rclcpp REQUIRED)
 find_package(tf2 REQUIRED)
 find_package(tf2_msgs REQUIRED)
 
+ament_python_install_package(${PROJECT_NAME} PACKAGE_DIR src/${PROJECT_NAME})
+
 include_directories(include
   ${geometry_msgs_INCLUDE_DIRS}
   ${message_filters_INCLUDE_DIRS}
